@@ -1,0 +1,11 @@
+{
+  "CICIoT2023": {
+    "flow_only": 0.9801,
+    "knn_only": 0.9512,
+    "cnn_only": 0.9634,
+    "lstm_only": 0.9701,
+    "fixed_thresh": 0.9743,
+    "full_ensemble": 0.9828,
+    "note": "Flow/KNN values from ablation analysis; full ensemble from original experimental run"
+  }
+}

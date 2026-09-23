@@ -1,0 +1,12 @@
+{
+  "TOR": {
+    "flow_only": 0.8955,
+    "knn_only": 0.8617,
+    "full_ensemble": 0.8921
+  },
+  "VPN": {
+    "flow_only": 0.9208,
+    "knn_only": 0.922,
+    "full_ensemble": 0.9219
+  }
+}
