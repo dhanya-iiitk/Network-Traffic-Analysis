@@ -82,3 +82,14 @@ pauc = trapezoid(tpr[mask], fpr[mask]) / 0.05
 print(f"AUROC={auroc:.4f}  pAUROC={pauc:.4f}  w*={best_w:.1f}")
 print(f"TPR@0.1%={tpr_at_fpr(fpr,tpr,0.001):.4f}  TPR@0.5%={tpr_at_fpr(fpr,tpr,0.005):.4f}")
 print(f"TPR@1%={tpr_at_fpr(fpr,tpr,0.01):.4f}  TPR@5%={tpr_at_fpr(fpr,tpr,0.05):.4f}")
+
+# Fusion strategy comparison (R1-C3)
+ens_eq  = 0.5*fl_norm + 0.5*knn_norm
+a_flow  = roc_auc_score(y, fl_norm)
+a_knn   = roc_auc_score(y, knn_norm)
+a_equal = roc_auc_score(y, ens_eq)
+print(f"\nFusion strategy comparison:")
+print(f"  Flow only  (w=1.0) : {a_flow:.4f}")
+print(f"  Equal-w    (w=0.5) : {a_equal:.4f}")
+print(f"  KNN only   (w=0.0) : {a_knn:.4f}")
+print(f"  Adaptive   (w={best_w:.1f}) : {auroc:.4f}")

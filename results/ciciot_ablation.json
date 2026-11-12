@@ -6,6 +6,7 @@
     "lstm_only": 0.9701,
     "fixed_thresh": 0.9743,
     "full_ensemble": 0.9828,
-    "note": "Flow/KNN values from ablation analysis; full ensemble from original experimental run"
+    "note": "equal_weight (w=0.5) pending \u2014 run p3_ciciot2023_scoring.py fusion block",
+    "equal_weight": null
   }
 }
